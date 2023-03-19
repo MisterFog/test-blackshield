@@ -4,7 +4,7 @@ import { UseControllerReturn } from 'react-hook-form';
 interface FFInputProps {
   field: UseControllerReturn['field'];
   id: string;
-  labelText: NonNullable<React.ReactNode> | string;
+  labelText: string;
   type?: string;
   disabled?: boolean;
   required?: boolean;
@@ -18,14 +18,10 @@ export const FFInput: FC<FFInputProps> = ({
   type,
   invalid,
   invalidText,
-  required = false,
   labelText,
   ...rest
 }) => (
   <div className="form_row">
-    <label htmlFor="id">
-      <span className={required ? 'red_star' : ''}>{labelText}</span>
-    </label>
     <input
       id={id}
       type={type}
@@ -33,6 +29,7 @@ export const FFInput: FC<FFInputProps> = ({
       value={field.value}
       onChange={field.onChange}
       autoComplete="off"
+      placeholder={labelText}
     />
     {invalid && (
       <label htmlFor="id" className="input_notification">

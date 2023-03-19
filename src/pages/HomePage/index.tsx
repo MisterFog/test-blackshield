@@ -5,8 +5,10 @@ const HomePage = () => {
   return (
     <div className="blackshield-content">
       <div className="blackshield-wrap">
-        <h2>Authorization</h2>
-        <p>Log in to the site to access the personal account of your company.</p>
+        <h2>Авторизация</h2>
+        <p>
+          Для доступа к личному кабинете вашей <br /> компании авторизуйтесь на сайте
+        </p>
 
         <NewForm config={config} />
 
@@ -15,8 +17,8 @@ const HomePage = () => {
           type="submit"
           disabled={false}
           className="btn-flip"
-          data-back="Inter"
-          data-front="Submit"
+          data-back="Войти"
+          data-front="Войти"
         />
       </div>
     </div>
