@@ -13,7 +13,6 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     save: (state, action: PayloadAction<any>) => ({ ...state, ...action.payload }),
-    // save: (state) => ({ ...state }),
   },
 });
 
