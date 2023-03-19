@@ -1,0 +1,25 @@
+#new_form {
+  margin-bottom: 2rem;
+
+  .form_row {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .input_notification {
+      position: absolute;
+      bottom: -1.4rem;
+
+      p {
+        color: red;
+      }
+    }
+
+    input {
+      padding: 1rem;
+      border: 1px outset pink;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+  }
+}
